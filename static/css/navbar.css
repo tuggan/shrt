@@ -1,0 +1,52 @@
+.margin-right {
+    margin-right: 5px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #212121;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #03A9F4;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+
+.navbar a.right {
+    float: right;
+}
+
+.navbar .icon {
+    background-color: #03A9F4;
+}
+
+/* Set acvite tab color and icon */
+.navbar a.active {
+    background-color: #FFFFFF;
+    color: #212121;
+}
+
+.navbar a.active .icon {
+    background-color: #212121;
+}
+
+/* Color change text and icon on hover */
+
+.navbar a:hover {
+    background-color: #03A9F4;
+    color: #212121;
+}
+
+.navbar a:hover .icon {
+    background-color: #212121;
+}
+
+

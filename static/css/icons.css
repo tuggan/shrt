@@ -1,0 +1,53 @@
+.icon {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #212121;
+}
+
+.icon:hover,
+.icon:focus {
+    background-color: #03A9F4;
+}
+
+.icon-home {
+    mask: url(../img/icons/home.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+.icon-database {
+    mask: url(../img/icons/database.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+.icon-user {
+    mask: url(../img/icons/user.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+.icon-user-plus {
+    mask: url(../img/icons/user-plus.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+.icon-link {
+    mask: url(../img/icons/link.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+.icon-link2 {
+    mask: url(../img/icons/link2.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+.icon-link-external {
+    mask: url(../img/icons/external-link.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}

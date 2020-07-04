@@ -1,0 +1,25 @@
+{% extends 'url/base.html' %}
+{% block content %}
+    <table>
+        <tr>
+            <td>Short URL:</td>
+            <td><a href="{% url 'url:redirect' object.short %}">{{ object.short }}</a></td>
+        </tr>
+        <tr>
+            <td>URL:</td>
+            <td><a href="{{ object.url }}">{{ object.url }}</a></td>
+        </tr>
+        <tr>
+            <td>Date added:</td>
+            <td>{{ object.created }}</td>
+        </tr>
+        <tr>
+            <td>Last visited:</td>
+            <td>{{ object.last_visited }}</td>
+        </tr>
+        <tr>
+            <td>Times visited:</td>
+            <td>{{ object.times_visited }}</td>
+        </tr>
+</table>
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends 'url/base.html' %}
+{% load static %}
+{% block content %}
+    {% if form.url.errors %}
+        <ol>
+            {% for error in form.url.errors %}
+                <li><strong>{{ error|escape }}</strong></li>
+            {% endfor %}
+        </ol>
+    {% endif %}
+
+    <form action="{% url 'url:index' %}" method="post">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+        <div class="centered_input">
+        <div class="form_wrapper{% if form.url.errors %} warn{% endif %}">{{ form.url }}</div><div class="button_wrapper"><input type="submit" value="Submit"></div>
+        </div>
+    </form>
+
+{% endblock content %}

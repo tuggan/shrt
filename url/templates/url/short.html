@@ -1,0 +1,5 @@
+{% extends 'url/base.html' %}
+{% block content %}
+    <h1>Short url here<h1>
+    <a href="{% url 'url:redirect' short %}">{{ short }}</a>
+{% endblock content %}
