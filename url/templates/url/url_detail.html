@@ -1,4 +1,8 @@
 {% extends 'url/base.html' %}
+{% load static %}
+{% block includes %}
+<script src="{% static "js/url_detail.js" %}"></script>
+{% endblock includes %}
 {% block content %}
     <table>
         <tr class="hidden">

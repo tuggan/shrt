@@ -20,7 +20,7 @@ class UrlLogViewSet(viewsets.ModelViewSet):
         queryset = UrlLog.objects.all()
         url = self.request.query_params.get('url', None)
         if url is not None:
-            queryset = queryset.filter(url=url)
+            queryset = queryset.filter(url=url).order_by('-time')
         return queryset
   
 
