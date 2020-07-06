@@ -22,3 +22,14 @@ class UrlForm(ModelForm):
         widgets = {
             'url': forms.TextInput(attrs={'placeholder': 'URL'}),
         }
+
+
+class UrlLog(models.Model):
+    url = models.ForeignKey(Url, on_delete=models.CASCADE, null=False, blank=False)
+    time = models.DateTimeField(auto_now_add=True, null=False, blank=False)
+    source = models.GenericIPAddressField(null=False, blank=False)
+    country_code = models.CharField(max_length=2, null=True)
+
+    def __str__(self):
+        return f'{self.url.short} - {self.source} ({self.country_code}): {self.time}'
+
