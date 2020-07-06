@@ -42,6 +42,10 @@ html, body {
     }
 }
 
+.hidden {
+    visibility: hidden;
+}
+
 .container {
     min-height: 100%;
     position: relative;

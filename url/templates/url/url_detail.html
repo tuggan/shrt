@@ -1,6 +1,10 @@
 {% extends 'url/base.html' %}
 {% block content %}
     <table>
+        <tr class="hidden">
+            <td>ID:</td>
+            <td id="url_id">{{ object.id }}</td>
+        </tr>
         <tr>
             <td>Short URL:</td>
             <td><a href="{% url 'url:redirect' object.short %}">{{ object.short }}</a></td>
