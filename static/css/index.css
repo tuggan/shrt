@@ -1,0 +1,46 @@
+.public_button {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+}
+
+
+.public_button input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    bottom: 0;
+}
+
+.checkmark {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin: auto;
+    padding: auto;
+    background-color: #000000;
+    mask: url(../img/icons/square.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+.public_button:hover input ~ .checkmark, .public_button:hover input:checked ~ .checkmark {
+    background-color: #757575;
+} 
+
+.public_button input:checked ~ .checkmark {
+    background-color: #03A9F4;
+    mask: url(../img/icons/check-square.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+

@@ -45,3 +45,6 @@ class DetailView(generic.DetailView):
 
 class ListView(generic.ListView):
     model = Url
+    paginate_by = 10
+    ordering = ['-times_visited', '-created']
+    queryset = Url.objects.filter(public=1)

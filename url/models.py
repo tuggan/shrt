@@ -10,6 +10,7 @@ class Url(models.Model):
     created = models.DateTimeField(auto_now_add=True, null=False, blank=False)
     last_visited = models.DateTimeField(auto_now=True, null=False, blank=False)
     times_visited = models.BigIntegerField(default=0, blank=False)
+    public = models.BooleanField(default=True, null=False, blank=False)
 
     def __str__(self):
         return f'{self.short} - {self.url}'
@@ -18,7 +19,7 @@ class Url(models.Model):
 class UrlForm(ModelForm):
     class Meta:
         model = Url
-        fields = ['url']
+        fields = ['url', 'public']
         widgets = {
             'url': forms.TextInput(attrs={'placeholder': 'URL'}),
         }

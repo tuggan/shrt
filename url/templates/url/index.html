@@ -1,5 +1,9 @@
 {% extends 'url/base.html' %}
 {% load static %}
+{% block includes %}
+<link rel="stylesheet" type="text/css" href="{% static "css/index.css" %}">
+{% endblock includes %}
+
 {% block content %}
     {% if form.url.errors %}
         <ol>
@@ -13,7 +17,11 @@
         {% csrf_token %}
         {{ form.non_field_errors }}
         <div class="centered_input">
-        <div class="form_wrapper{% if form.url.errors %} warn{% endif %}">{{ form.url }}</div><div class="button_wrapper"><input type="submit" value="Submit"></div>
+            <div class="form_wrapper{% if form.url.errors %} warn{% endif %}">{{ form.url }}</div><div class="button_wrapper"><input type="submit" value="Submit"></div>
+            <label class="public_button" >Public
+                {{ form.public }}
+                <span class="checkmark"></span>
+            </label>
         </div>
     </form>
 
