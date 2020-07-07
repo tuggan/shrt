@@ -52,12 +52,12 @@ function appendHistory(data) {
     // For each result in history fetch
     for (const h of data.results) {
         var tr = document.createElement("tr");
-        for (var rd of row_data[1]) {
+        for (var rd of row_data) {
             var td = document.createElement("td");
-            if (h[rd] == null) {
+            if (h[rd[1]] === null) {
                 text = "None";
             } else {
-                text = h[rd];
+                text = h[rd[1]];
             }
             if (rd == "time") {
                 text = new Date(text).toLocaleDateString(undefined, dateOptions);
