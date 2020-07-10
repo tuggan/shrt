@@ -56,11 +56,10 @@ function appendHistory(data) {
             var td = document.createElement("td");
             if (h[rd[1]] === null) {
                 text = "None";
+            } else if (rd[1] == "time") {
+                text = new Date(h[rd[1]]).toLocaleDateString(undefined, dateOptions);
             } else {
                 text = h[rd[1]];
-            }
-            if (rd == "time") {
-                text = new Date(text).toLocaleDateString(undefined, dateOptions);
             }
             td.textContent = text
             tr.appendChild(td);
